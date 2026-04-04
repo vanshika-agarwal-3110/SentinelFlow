@@ -1,0 +1,12 @@
+# --- Core Computer Vision & AI ---
+opencv-python
+ultralytics
+
+# --- Data Analysis & Visualization ---
+matplotlib
+pandas
+
+# --- Integration & Utilities ---
+openai
+python-dotenv
+pyyaml

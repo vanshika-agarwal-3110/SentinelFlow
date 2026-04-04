@@ -1,0 +1,27 @@
+# Secrets 
+.env
+
+# Data and Models
+*.csv
+*.pt
+*.mp4
+runs/
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+.venv/
+.vscode/
+
+# Reports
+reports.txt
+
+# Jupyter & Testing
+.ipynb_checkpoints/
+.pytest_cache/
+
+# OS Specific
+.DS_Store
+Thumbs.db

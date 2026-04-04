@@ -1,0 +1,20 @@
+model:
+  path: "yolov8s.pt"
+  confidence: 0.25
+
+video:
+  source: "background_video_people_walking_720p.mp4"
+  width: 960
+  height: 720
+
+thresholds:
+  safe: 0.00002
+  moderate: 0.00005
+
+zones:
+  - name: "Left"
+    coords: [0, 0, 320, 720]
+  - name: "Center"
+    coords: [320, 0, 640, 720]
+  - name: "Right"
+    coords: [640, 0, 960, 720]
