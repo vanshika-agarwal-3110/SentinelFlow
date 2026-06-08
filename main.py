@@ -5,7 +5,11 @@ from datetime import datetime
 import os
  
 # Use a local video file or set to 0 for a connected camera feed
-INPUT_PATH = "background_video_people_walking_720p.mp4"
+#INPUT_PATH = "background_video_people_walking_720p.mp4"
+# Reads whatever option was clicked on the frontend app.py page
+env_source = os.getenv("SENTINEL_SOURCE", "background_video_people_walking_720p.mp4")
+# Convert string '0' to integer 0 if the user chose the live camera feed option
+INPUT_PATH = int(env_source) if env_source == "0" else env_source
 CONFIDENCE_THRESHOLD = 0.25  # Balanced for YOLOv8s
 DISPLAY_RES = (960, 720)
 
@@ -127,10 +131,13 @@ while True:
         cv2.putText(frame, "!!! CROWD LIMIT EXCEEDED !!!", (20, DISPLAY_RES[1] - 30), 
                     cv2.FONT_HERSHEY_SIMPLEX, 0.8, (0, 0, 255), 2)
 
-    cv2.imshow("SentinelFlow - Live Monitor", frame)
-
-    if cv2.waitKey(1) & 0xFF == 27: # ESC to exit
-        break
+    if os.getenv("SENTINEL_SOURCE") is not None:
+        if cv2.waitKey(1) & 0xFF == 27:
+            break
+    else:
+        cv2.imshow("SentinelFlow - Live Monitor", frame)
+        if cv2.waitKey(1) & 0xFF == 27: # ESC to exit
+            break
 
 cap.release()
 cv2.destroyAllWindows()

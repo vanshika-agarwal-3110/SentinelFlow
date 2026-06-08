@@ -159,10 +159,11 @@ I built a separate analysis script using Pandas and Matplotlib to transform raw 
 
 * Python
 * OpenCV
-* YOLOv8 (Ultralytics)
+* YOLOv8 
 * Pandas
 * Matplotlib
-* OpenAI API (optional)
+* OpenAI API 
+* Streamlit 
 
 ---
 
@@ -184,7 +185,13 @@ crowd-detection/
 Install dependencies:
 
 ```
-pip install opencv-python ultralytics pandas matplotlib python-dotenv openai
+pip install opencv-python-headless ultralytics pandas matplotlib python-dotenv openai streamlit
+```
+
+Run the interactive dashboard:
+
+```
+python -m streamlit run app.py
 ```
 
 Run detection:

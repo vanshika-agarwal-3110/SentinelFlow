@@ -1,5 +1,5 @@
 # --- Core Computer Vision & AI ---
-opencv-python
+opencv-python-headless
 ultralytics
 
 # --- Data Analysis & Visualization ---
@@ -10,3 +10,6 @@ pandas
 openai
 python-dotenv
 pyyaml
+
+# --- Web Frontend Framework ---
+streamlit
