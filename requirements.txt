@@ -1,15 +1,15 @@
-# --- Core Computer Vision & AI ---
+# Computer Vision & AI
 opencv-python-headless
 ultralytics
 
-# --- Data Analysis & Visualization ---
+# Data Analysis & Visualization
 matplotlib
 pandas
 
-# --- Integration & Utilities ---
+# Utilities
 openai
 python-dotenv
 pyyaml
 
-# --- Web Frontend Framework ---
+# Web Application
 streamlit
